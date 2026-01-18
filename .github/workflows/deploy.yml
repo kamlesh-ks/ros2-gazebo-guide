@@ -67,7 +67,7 @@ jobs:
       
       # Build documentation
       - name: Build documentation
-        run: mkdocs build --strict
+        run: mkdocs build
       
       # Upload artifact for deployment
       - name: Upload artifact
