@@ -1,13 +1,5 @@
 # 🤖 ROS2 Gazebo Simulation Guide
 
-<div align="center">
-
-![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros)
-![Gazebo](https://img.shields.io/badge/Gazebo-Fortress-orange)
-![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)
-[![Documentation](https://img.shields.io/badge/docs-online-blue)](https://kamlesh-ks.github.io/ros2-gazebo-guide/)
-[![CI](https://github.com/kamlesh-ks/ros2-gazebo-guide/actions/workflows/deploy.yml/badge.svg)](https://github.com/kamlesh-ks/ros2-gazebo-guide/actions)
-
 **Complete guide for setting up ROS2 Humble with Ignition Gazebo Fortress**
 
 [📖 Documentation](https://kamlesh-ks.github.io/ros2-gazebo-guide/) •
