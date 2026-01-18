@@ -1,0 +1,138 @@
+# MkDocs Configuration for ROS2 Gazebo Simulation Guide
+# Documentation: https://www.mkdocs.org/
+
+site_name: ROS2 Gazebo Simulation Guide
+site_description: Complete guide for setting up ROS2 Humble with Ignition Gazebo Fortress - Differential Drive, Sensors, SLAM & Navigation
+site_author: Kamlesh Singh
+site_url: https://kamlesh-ks.github.io/ros2-gazebo-guide/
+
+# Repository info (shows link in header)
+repo_name: kamlesh-ks/ros2-gazebo-guide
+repo_url: https://github.com/kamlesh-ks/ros2-gazebo-guide
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2026 Kamlesh Singh
+
+# Theme configuration
+theme:
+  name: mkdocs
+  language: en
+  
+  # Color palette
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  # Features
+  features:
+    - navigation.instant          # Instant loading
+    - navigation.tracking         # URL tracking
+    - navigation.tabs             # Top-level sections as tabs
+    - navigation.tabs.sticky      # Tabs stay visible when scrolling
+    - navigation.sections         # Render sections as groups
+    - navigation.expand           # Expand all sections by default
+    - navigation.top              # Back to top button
+    - navigation.indexes          # Section index pages
+    - search.highlight            # Highlight search terms
+    - search.share                # Share search results
+    - search.suggest              # Search suggestions
+    - content.code.copy           # Copy button for code blocks
+    - content.code.annotate       # Code annotations
+    - content.tabs.link           # Link content tabs
+    - toc.follow                  # TOC follows scroll
+  
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/robot
+  
+  # Custom favicon
+  favicon: assets/favicon.png
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+  - Robot Setup:
+    - URDF Basics: robot/urdf-basics.md
+    - Sensors: robot/sensors.md
+    - Gazebo Plugins: robot/gazebo-plugins.md
+  - Simulation:
+    - World Creation: simulation/world-creation.md
+    - ROS-Gazebo Bridge: simulation/bridge.md
+    - Launch Files: simulation/launch-files.md
+  - SLAM & Mapping:
+    - SLAM Toolbox: slam/slam-toolbox.md
+    - Mapping Workflow: slam/mapping-workflow.md
+  - Navigation:
+    - Nav2 Setup: navigation/nav2-setup.md
+    - Navigation Workflow: navigation/navigation-workflow.md
+    - Parameter Tuning: navigation/tuning.md
+  - Reference:
+    - Troubleshooting: reference/troubleshooting.md
+    - Commands Cheatsheet: reference/commands.md
+    - Resources: reference/resources.md
+  - Full Guides:
+    - Part 1 - Setup & URDF: guides/GAZEBO_SIMULATION_GUIDE.md
+    - Part 2 - Plugins & Bridge: guides/GAZEBO_SIMULATION_GUIDE_PART2.md
+    - Part 3 - SLAM & Navigation: guides/GAZEBO_SIMULATION_GUIDE_PART3.md
+    - Part 4 - Package & RViz: guides/GAZEBO_SIMULATION_GUIDE_PART4.md
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+# Extra CSS/JS
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Extra configuration
+extra:
+  # Social links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kamlesh-ks
+      name: GitHub
+  
+  # Version info
+  version:
+    provider: mike
+    default: latest

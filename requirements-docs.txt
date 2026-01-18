@@ -1,0 +1,21 @@
+# MkDocs Documentation Dependencies
+# Install with: pip install -r requirements-docs.txt
+
+# MkDocs core
+mkdocs>=1.5.3
+
+# Material theme (recommended)
+mkdocs-material>=9.5.0
+
+# Extensions and plugins
+mkdocs-minify-plugin>=0.7.1
+pymdown-extensions>=10.5
+
+# Optional: For versioning (if you want to maintain multiple versions)
+# mike>=2.0.0
+
+# Optional: For git revision date
+# mkdocs-git-revision-date-localized-plugin>=1.2.0
+
+# Optional: For macros (if you want to use Jinja templates in docs)
+# mkdocs-macros-plugin>=1.0.0

@@ -1,0 +1,177 @@
+/* ==================== ROOT VARIABLES ==================== */
+:root {
+  --md-primary-fg-color: #1565c0;
+  --md-primary-fg-color--light: #42a5f5;
+  --md-primary-fg-color--dark: #0d47a1;
+  --md-accent-fg-color: #ff6f00;
+}
+
+/* Dark mode overrides */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #42a5f5;
+  --md-accent-fg-color: #ffab00;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+
+/* Code blocks */
+.highlight code,
+.highlighttable code {
+  font-size: 0.85rem;
+}
+
+/* Inline code */
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* ==================== ADMONITIONS ==================== */
+
+/* Custom ROS admonition */
+.md-typeset .admonition.ros,
+.md-typeset details.ros {
+  border-color: #22b8cf;
+}
+.md-typeset .ros > .admonition-title,
+.md-typeset .ros > summary {
+  background-color: rgba(34, 184, 207, 0.1);
+}
+.md-typeset .ros > .admonition-title::before,
+.md-typeset .ros > summary::before {
+  background-color: #22b8cf;
+  -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>');
+  mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>');
+}
+
+/* Custom Gazebo admonition */
+.md-typeset .admonition.gazebo,
+.md-typeset details.gazebo {
+  border-color: #ff922b;
+}
+.md-typeset .gazebo > .admonition-title,
+.md-typeset .gazebo > summary {
+  background-color: rgba(255, 146, 43, 0.1);
+}
+
+/* ==================== NAVIGATION ==================== */
+
+/* Active navigation item */
+.md-nav__link--active {
+  font-weight: 700;
+}
+
+/* ==================== TABLES ==================== */
+
+/* Responsive tables */
+.md-typeset table:not([class]) {
+  font-size: 0.85rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* ==================== CODE BLOCKS ==================== */
+
+/* Terminal-style code blocks */
+.md-typeset pre > code[class*="language-bash"],
+.md-typeset pre > code[class*="language-shell"] {
+  background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+/* YAML code blocks */
+.md-typeset pre > code[class*="language-yaml"] {
+  background: linear-gradient(180deg, #1e3a5f 0%, #0d2137 100%);
+}
+
+/* XML code blocks */
+.md-typeset pre > code[class*="language-xml"] {
+  background: linear-gradient(180deg, #2d4a2d 0%, #1a2d1a 100%);
+}
+
+/* ==================== CARDS (for grid) ==================== */
+
+.grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ==================== MERMAID DIAGRAMS ==================== */
+
+.mermaid {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* ==================== CUSTOM BANNER ==================== */
+
+.hero-banner {
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== BADGES ==================== */
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.badges img {
+  height: 24px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media screen and (max-width: 76.1875em) {
+  .md-nav__source {
+    background-color: var(--md-primary-fg-color--dark);
+  }
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+  .md-sidebar,
+  .md-header,
+  .md-footer {
+    display: none;
+  }
+  
+  .md-content {
+    margin: 0;
+    padding: 0;
+  }
+}
